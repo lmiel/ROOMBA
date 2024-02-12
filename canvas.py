@@ -22,7 +22,8 @@ class Zona():
     def dibuja_zona(self):
         for self.zona, info in zonas.items():
             self.canvas.create_rectangle(*info['coordenadas'], fill=info['color'])
-        for self.zona in zonas.items()
+        for self.zona in zonas.items():
+            self.canvas.create_text(info['coordenadas'][0] + 10, info['coordenadas'][1] + 10, text=self.nombre, anchor="nw")
         
 class Obstaculo():
     def __init__(self, nombre, color, ancho_obj, alto_obj, x, y, canvas:tk.Canvas):
